@@ -89,9 +89,14 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
+    email_spec (2.2.2)
+      htmlentities (~> 4.3.3)
+      launchy (~> 2.1)
+      mail (~> 2.7)
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    htmlentities (4.3.4)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.1)
@@ -103,6 +108,10 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    launchy (2.5.2)
+      addressable (~> 2.8)
+    letter_opener (1.9.0)
+      launchy (>= 2.2, < 3)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -231,14 +240,17 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-23
 
 DEPENDENCIES
   bcrypt (~> 3.1)
   bootsnap
   capybara
   debug
+  email_spec
   importmap-rails
   jbuilder
+  letter_opener
   puma (~> 5.0)
   rails (~> 7.0.6)
   redis (~> 4.0)
