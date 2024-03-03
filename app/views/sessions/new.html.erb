@@ -16,10 +16,10 @@
                   </div>
                   <%= f.submit "Sign in", class: "submit", id: "user-login-submit" %>
                   <p class="dimmed-text">
-                    Create an account? <a href="#" class="link">Sign up</a>
+                    Create an account? <%= link_to "New account", sign_up_path, class: "link", id:'user-submit' %>
                   </p>
                   <p class="dimmed-text">
-                    Forgot password?  <%= link_to "Reset password", reset_password_path %>
+                    Forgot password?  <%= link_to "Reset password", reset_password_path, class: "link" %>
                   </p>
               <% end %>
           </div>

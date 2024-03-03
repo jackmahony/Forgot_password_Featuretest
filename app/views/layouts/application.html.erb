@@ -13,12 +13,19 @@
 
   <body>
     <main>
-      <% flash.each do |type, msg| %>
-        <div class="flash"><%= msg %></div>
+      <nav class="bg-gray-800">
+          <div class="mx-auto">
+            <div class="items-items-center ">
+              <%= link_to "Sign Up", sign_up_path, class: "text-white rounded-md px-3 py-2 text-sm font-medium" %>
+              <%= link_to "Sign In", sign_in_path, class: "text-white rounded-md px-3 py-2 text-sm font-medium", id: "user-login" %>
+              <%= button_to "Sign Out", sign_out_path, method: :delete,class: "text-white rounded-md px-3 py-2 text-sm font-medium", id: "user-sign-out" %>
+            </div>
+          </div>  
+      </nav>  
+       <% flash.each do |type, msg| %>
+      <div class="flash"><%= msg %></div>
       <% end %>
-      <%= link_to "Sign Up", sign_up_path %>
-      <%= link_to "Sign In", sign_in_path, id: "user-login" %>
-      <%= button_to "Sign Out", sign_out_path, method: :delete, id: "user-sign-out" %>
+   
       <%= yield %>
     </main>
   </body>

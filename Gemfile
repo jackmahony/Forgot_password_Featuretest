@@ -71,7 +71,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem "rspec-rails", "~> 6.0.0"
+  gem "rspec-rails", "~> 6.1.0"
   gem 'email_spec'
 end
 

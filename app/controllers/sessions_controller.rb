@@ -4,8 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    flash[:notice] = "Welcome #{user.email}"
-    redirect_to root_path
+    if user
+      flash[:notice] = "Welcome #{user.email}"
+      redirect_to home_path
+    else
+      # Handle unsuccessful authentication (e.g., display an error message)
+      flash[:alert] = "Invalid email or password"
+      render :new
+    end
   end
 
   private

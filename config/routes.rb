@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   post "/reset_password_email", to: "passwords#create", as: :reset_password_email
   get '/password_reset_confirmation', to: 'passwords#confirmation', as: :password_reset_confirmation
   get "/reset_password_confirm", to: "passwords#update", as: :reset_password_confirm
-  root "site#index"
+  # patch "/reset_password_confirm", to: "passwords#update", as: :reset_password_confirm
+  get "home", to: "site#index", as: :home
+  root "sessions#new"
 end

@@ -18,6 +18,9 @@ class PasswordsController < ApplicationController
     end
     
     def confirmation
+    end  
+
+    def update
 
     end  
   end
