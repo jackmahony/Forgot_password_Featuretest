@@ -3,12 +3,12 @@
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="form-heading">
-                Enter a new password
+                Reset Password
               </h1>
-                <%= form_with model: @user, url: reset_password_update_path(token: params[:token]), class: "space-y-4 md:space-y-6" do |f| %>
+                <%= form_with model: @user, url: reset_password_email_path, class: "space-y-4 md:space-y-6" do |f| %>
                   <div>
-                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter your new password</label>
-                      <%= f.password_field :password, class: "text-field", placeholder: "=====", id: "new-password" %>
+                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter your email</label>
+                      <%= f.email_field :email, class: "text-field", placeholder: "name@company.com", id: "user-email-reset" %>
                   </div>
                   <%= f.submit "Reset Password", class: "submit", id: "submit-password-reset" %>
               <% end %>

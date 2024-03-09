@@ -10,7 +10,7 @@ class RegistrationsController < ApplicationController
 
     if @user.save
       flash[:notice] = "Welcome #{@user.email}"
-      redirect_to root_path
+      redirect_to home_path
     end
   end
 
